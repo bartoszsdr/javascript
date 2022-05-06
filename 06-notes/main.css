@@ -1,0 +1,142 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	height: 100vh;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: rgb(243, 243, 243);
+}
+
+button,
+option,
+textarea {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 4em;
+	height: 12em;
+}
+
+.menu button,
+.note-panel .save,
+.note-panel .cancel {
+	padding: 1.2em 2.5em;
+	background: none;
+	border: 0.1em solid #999;
+	border-radius: 0.5em;
+	font-size: 1.4rem;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.menu button:hover,
+.note-panel .save:hover,
+.note-panel .cancel:hover {
+	background-color: #333;
+	color: #ddd;
+}
+
+.icon {
+	margin-right: 1em;
+}
+
+.add {
+	margin-right: 2em;
+}
+
+.note-area {
+	display: flex;
+	align-items: start;
+	flex-wrap: wrap;
+	padding: 2em;
+}
+
+.note {
+	margin: 4em 2em;
+	width: 24em;
+	background-color: rgb(255, 243, 0);
+	border: 0.1em solid black;
+}
+
+.note-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2em;
+	background-color: rgba(0, 0, 0, 0.06);
+}
+
+.note-header .delete-note {
+	background: none;
+	font-size: 2rem;
+	border: none;
+	cursor: pointer;
+}
+
+.spin {
+	padding: 0.2em;
+	transition: transform 0.5s;
+}
+
+.spin:hover {
+	transform: rotate(90deg);
+}
+
+.note-body {
+	padding: 2em 1.5em;
+	font-size: 1.4rem;
+}
+
+.note-panel {
+	position: absolute;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 4em 0;
+	width: 60em;
+	background-color: #fff;
+	box-shadow: 0 0 10px black;
+	border-radius: 5px;
+	display: none;
+}
+
+.note-panel h2 {
+	margin-bottom: 2em;
+	text-transform: uppercase;
+}
+
+.note-panel label {
+	margin-bottom: 1em;
+}
+
+.note-panel #text,
+.note-panel #category {
+	margin-bottom: 2em;
+	padding: 1em 2em;
+	width: 100%;
+	max-width: 90%;
+	max-height: 60em;
+	font-size: 1.6rem;
+	border-radius: 0.5em;
+	border: 0.1em solid black;
+}
+
+.note-panel .error {
+	margin-bottom: 2em;
+	color: red;
+	visibility: hidden;
+}
