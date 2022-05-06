@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	position: relative;
+	font-family: 'Ubuntu', sans-serif;
+	background-image: url(./img/background.jpg);
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+}
+
+body::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	z-index: 1;
+}
+
+.keys {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+	min-height: 100vh;
+	z-index: 2;
+}
+
+.key {
+	text-align: center;
+	width: 11em;
+	margin: 1em;
+	padding: 1em 0.5em;
+	background: rgba(0, 0, 0, 0.4);
+	text-shadow: 0 0 0.5rem black;
+	border: 0.4rem solid black;
+	border-radius: 0.5rem;
+	color: white;
+	transition: all 0.07s ease;
+	z-index: 2;
+}
+
+kbd {
+	display: block;
+	font-size: 4rem;
+}
+
+.sound {
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	color: darkorange;
+}
+
+.playing {
+	transform: scale(1.1);
+	border-color: darkorange;
+	box-shadow: 0 0 1em darkorange;
+}
