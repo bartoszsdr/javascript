@@ -74,6 +74,7 @@ textarea {
 	justify-content: space-between;
 	align-items: center;
 	padding: 2em;
+	font-size: 1.2rem;
 	background-color: rgba(0, 0, 0, 0.06);
 }
 
@@ -138,5 +139,6 @@ textarea {
 .note-panel .error {
 	margin-bottom: 2em;
 	color: red;
+	font-size: 1.6rem;
 	visibility: hidden;
 }
