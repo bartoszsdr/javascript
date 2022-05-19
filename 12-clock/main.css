@@ -1,0 +1,67 @@
+html {
+	background: #018ded;
+	background-size: cover;
+	text-align: center;
+	font-size: 10px;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	min-height: 100vh;
+	font-size: 2rem;
+}
+
+.clock {
+	position: relative;
+	width: 30rem;
+	height: 30rem;
+	margin: 50px auto;
+	padding: 2rem;
+	border: 20px solid white;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.1), inset 0 0 0 3px #efefef, inset 0 0 10px black, 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-face {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: translateY(-3px);
+}
+
+.hand {
+	position: absolute;
+	top: 50%;
+	width: 50%;
+	height: 6px;
+	background: black;
+	border-radius: 9px;
+	/* change the start of clock hands to the beggining of the div for further rotation purposes */
+	transform-origin: 100%;
+	/* point clock hands to 12 o'clock */
+	transform: rotate(90deg);
+	/* set transition time and timing function */
+	transition: all 0.05s;
+	transition-timing-function: cubic-bezier(0, 3.35, 0.17, 1);
+}
+
+.second-hand {
+	background-color: red;
+}
+
+.hour-hand {
+	height: 8px;
+}
+
+.center {
+	position: absolute;
+	width: 6%;
+	height: 6%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: red;
+	border-radius: 50%;
+}
